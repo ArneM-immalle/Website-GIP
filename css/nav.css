@@ -1,0 +1,203 @@
+nav {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    margin: 0;
+    transition: 500ms ease;
+    -webkit-transition: 500ms ease;
+    -moz-transition: 500ms ease;
+    -ms-transition: 500ms ease;
+    -o-transition: 500ms ease;
+}
+
+nav.no-scroll .logo {
+    display: none;
+}
+
+.top-menu {
+    display: none;
+    position: relative;
+    float: right;
+    transition: 200ms ease;
+    -webkit-transition: 200ms ease;
+    -moz-transition: 200ms ease;
+    -ms-transition: 200ms ease;
+    -o-transition: 200ms ease;
+}
+
+li {
+    display: block;
+    float: left;
+    height: 60px;
+    margin: 0 1rem 0 1rem;
+}
+
+ul {
+    margin: 0;
+}
+
+.top-menu li * {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    color: rgb(var(--text-color));
+    padding: 0 1em;
+}
+
+@media screen and (max-width: 1000px) {
+    nav.scroll .logo {
+        display: none;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: unset;
+        background-color: rgba(255, 255, 255, 0.99);
+        position: relative;
+        margin: unset;
+        max-width: 100%;
+        display: none;
+        top: 0;
+        padding-right: 48px;
+        transition: 500ms ease;
+    }
+    nav ul li {
+        line-height: 3.75rem;
+        width: 100%;
+        margin: unset;
+        margin-right: 2rem;
+        list-style-type: none;
+        display: block;
+        text-decoration: none;
+        font-size: 15px;
+        text-align: center;
+    }
+    nav ul li a {
+        color: black;
+        line-height: 45px;
+    }
+}
+
+.mobile-open {
+    display: block;
+    width: 100%;
+}
+
+.hamburger-btn {
+    float: right;
+    display: block;
+    border: none;
+    background: transparent;
+    color: black;
+    height: calc(60px - 1rem);
+    width: calc(60px - 1rem);
+    margin: 0.5rem 0.5rem 0 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    position: fixed;
+}
+
+.hamburger-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-btn .hamburger-line {
+    height: 2px;
+    width: calc(60px - 2rem);
+    background: black;
+    display: block;
+    position: absolute;
+    left: calc(0.5rem - 1px);
+    transition: top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms, -webkit-transform 150ms ease-in;
+    transition: transform 150ms ease-in, top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms;
+    transition: transform 150ms ease-in, top 150ms ease-out 150ms, bottom 150ms ease-out 150ms, opacity 150ms ease 75ms, -webkit-transform 150ms ease-in;
+}
+
+.hamburger-btn .hamburger-line:first-child {
+    top: 0.75rem;
+}
+
+.hamburger-btn .hamburger-line:nth-child(2) {
+    top: calc(50% - 1px);
+}
+
+.hamburger-btn .hamburger-line:last-child {
+    bottom: 0.75rem;
+}
+
+.hamburger-cross .hamburger-line {
+    transition: top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms, -webkit-transform 150ms ease-out 150ms;
+    transition: transform 150ms ease-out 150ms, top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms;
+    transition: transform 150ms ease-out 150ms, top 150ms ease-in, bottom 150ms ease-in, opacity 150ms ease 75ms, -webkit-transform 150ms ease-out 150ms;
+}
+
+.hamburger-cross .hamburger-line:first-child {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: calc(50% - 1px);
+}
+
+.hamburger-cross .hamburger-line:nth-child(2) {
+    top: calc(50% - 1px);
+    opacity: 0;
+}
+
+.hamburger-cross .hamburger-line:last-child {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: calc(50% - 1px);
+}
+
+.no-scroll {
+    height: 60px;
+    width: 100%;
+    float: left;
+}
+
+.scroll {
+    width: 100%;
+    height: 0;
+}
+
+@media screen and (min-width: 1000px) {
+    .scroll {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        background: rgba(var(--background-color), 0.95);
+        height: 60px;
+    }
+}
+
+.scroll .top-menu li a, .scroll .brand {
+    color: black;
+}
+
+.scroll .hamburger-line {
+    background: #000;
+}
+
+@media screen and (min-width: 1000px) {
+    nav.scroll .logo {
+        float: left;
+        margin-left: 10%;
+    }
+    nav.scroll .logo img {
+        height: 6.5rem;
+    }
+    .top-menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #top-menu li *:hover {
+        color: white;
+        background-color: rgb(var(--second-color));
+        transition: 500ms ease;
+        font-weight: bold;
+    }
+    .hamburger-btn {
+        display: none;
+    }
+}

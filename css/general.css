@@ -1,0 +1,75 @@
+:root {
+    --text-color: 40, 42, 43;
+    --second-color: 68, 145, 137;
+    --background-color: 246, 246, 246;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    font-family: "Coda";
+    color: rgb(var(--text-color));
+    text-decoration: none;
+}
+
+a.hand {
+    cursor: pointer;
+}
+
+section:not(#home) {
+    margin: 15% 10% 10% 10%;
+    width: 80%;
+}
+
+@media (min-width: 1000px) {
+    .row {
+        display: flex;
+    }
+    .tbl {
+        float: left;
+        margin-right: 5%;
+        flex: 45%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    line-height: 3.2rem;
+    font-weight: 75;
+    color: rgb(var(--second-color));
+    font-family: 'Anton';
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 0px solid rgb(var(--text-color));
+    padding-left: 4px;
+}
+
+table .header td {
+    background-color: rgb(var(--second-color));
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    height: 2rem;
+}
