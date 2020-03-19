@@ -1,3 +1,7 @@
+#about p {
+  text-align: justify;
+}
+
 #about .box {
   position: absolute;
   background-color: rgb(var(--second-color));
@@ -6,7 +10,6 @@
   bottom: -5%;
   right: -25%;
   width: 50%;
-  border-bottom-right-radius: 40px;
   box-shadow: 0 30px 100px -20px rgba(0, 0, 0, 0.55);
 }
 

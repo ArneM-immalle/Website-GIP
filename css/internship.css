@@ -14,11 +14,8 @@ section#internship {
 #internship .quote {
   margin: 5rem 5% 0 5%;
   width: 90%;
-}
-
-#internship .quote {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 
 #internship .quote-mark {

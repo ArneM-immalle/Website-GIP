@@ -21,7 +21,7 @@ a.hand {
 }
 
 section:not(#home) {
-    margin: 15% 10% 10% 10%;
+    margin: 10rem 10% 10% 10%;
     width: 80%;
 }
 

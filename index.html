@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/internship.css" />
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
 
   <body>
@@ -87,7 +88,7 @@
         <div class="tbl">
           <img
             src="images/about.png"
-            style="position: relative; object-fit:cover; height: 100%; width: 100%; border-top-left-radius: 60px;"
+            style="position: relative; object-fit:cover; height: 100%; width: 100%;"
           />
           <div style="position:relative">
             <div class="box">
@@ -110,7 +111,9 @@
     </section>
 
     <section id="internship" data-aos="fade-up">
-      <h1>DE OBSERVATIESTAGE</h1>
+      <h1>
+        DE OBSERVATIESTAGE
+      </h1>
       <div class="row quote">
         <div class="tbl quote-mark">🙶</div>
         <div class="tbl quote-text" style="flex:100%;">
@@ -189,6 +192,71 @@
             te bedanken.
           </p>
           <p class="subject">Nederlands</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1>
+        CONTACT
+      </h1>
+      <div id="preface">
+        <p>Heb je een vraag? Aarzel dan niet om mij te contacteren!</p>
+        <button>
+          Maar kijk eerst even of je vraag hier niet beantwoord is.
+        </button>
+      </div>
+      <div class="row">
+        <div class="tbl mail">
+          <div class="contact-form">
+            <form width="100%" id="contactform" method="POST">
+              <input
+                name="name"
+                id="name"
+                type="text"
+                placeholder="Naam*"
+                required
+              /><br />
+              <input
+                name="email"
+                id="email"
+                type="text"
+                placeholder="E-mail*"
+                required
+              /><br />
+              <textarea
+                name="message"
+                placeholder="Jouw bericht*"
+                id="message"
+                rows="7"
+                required
+              ></textarea>
+              <input
+                type="button"
+                value="Verstuur"
+                id="submitFormData"
+                onclick="ContactSubmit();"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="tbl info">
+          <div class="line">
+            <i class="im im-mail"></i>
+            <p>arne.meylemans@immalle.be</p>
+          </div>
+          <div class="line">
+            <i class="im im-mobile"></i>
+            <p>+32 487 54 65 16</p>
+          </div>
+          <div class="line">
+            <i class="im im-github"></i>
+            <p>ArneM-immalle</p>
+          </div>
+          <div class="line">
+            <i class="im im-apartment"></i>
+            <p>Immaculata Secundair</p>
+          </div>
         </div>
       </div>
     </section>
