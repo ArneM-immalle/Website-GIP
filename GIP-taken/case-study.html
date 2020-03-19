@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ArNet</title>
+    <link rel="icon" href="images/logo.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Coda&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/gip.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <style>
+      table.mail tr th:nth-child(1) {
+        text-align: left;
+      }
+      table.mail tr th:nth-child(2) {
+        text-align: right;
+      }
+      p,
+      td {
+        text-align: justify;
+      }
+      h2 {
+        margin: 1.75rem 0 0.75rem 0;
+      }
+      img {
+        width: 100%;
+      }
+      a {
+        text-decoration: underline;
+      }
+      details {
+        margin-top: 1rem;
+      }
+      summary {
+        font-size: 1.35rem;
+      }
+
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-1rem);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      details[open] {
+        animation-name: fadeInDown;
+        animation-duration: 0.75s;
+      }
+
+      @media (max-width: 1000px) {
+        .row .tbl:not(:nth-child(1)) {
+          margin-top: 3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="home">
+      <div class="info">
+        <h1 style="word-break: break-all;">CASE-STUDY</h1>
+      </div>
+      <p class="path">
+        <a href="../index.html#internship">HOME</a> > CASE-STUDY
+      </p>
+    </section>
+
+    <section data-aos="fade-up">
+      <div class="row">
+        <div class="tbl">
+          <h1>BEST PRACTICES</h1>
+          <p>
+            Best practices zijn de richtlijnen die worden beschouwd als de
+            ideale manier om onder normale omstandigheden een server te
+            configureren. Om beheerders te helpen om inbreuken op best practices
+            te verminderen kan je de Best Practices Analyzer gebruiken. Dit is
+            een hulpprogramma voor serverbeheerders dat beschikbaar is in
+            Windows Server 2008 R2 en Windows Server 2012 (R2).
+          </p>
+        </div>
+        <div class="tbl">
+          <h1>DE OPDRACHT</h1>
+          <p>
+            Best Practices Analyzer scant de rollen die zijn geïnstalleerd op de
+            beheerde servers en meldt aan de gebruiker de gevonden inbreuken op
+            de best practices. Mijn case-study was om een Powershell-script te
+            schrijven met dezelfde taak als de Best Practices Analyzer. De
+            resultaten van dit script moesten in een HTML-file en een CSV-file
+            kunnen verschijnen. Uiteindelijk zal mijn code in een groter
+            Powershell-script komen, gemaakt door de werknemers van Aurelium.
+            Met die reden moest ik rekeninghouden met de variabele
+            $ServersSearchbase.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section data-aos="fade-up">
+      <h1>DE CASE-STUDY</h1>
+      <details style="margin-left: 2rem;">
+        <summary style="font-size: 1.5rem;font-weight: bold;"
+          >Info verzameld
+        </summary>
+        <p>
+          Ik ben deze case-study begonnen met een aantal commando’s te bekijken
+          in verband met BPA (Best Practices Analayzer). Op deze manier had ik
+          zicht op mijn mogelijkheden. Al snel kwam ik erachter dat er een
+          handig commando bestaat dat een geselecteerde rol kan scannen
+          (Invoke-BPAModel) en een commando die de best practices als resultaat
+          gaf (Get-BpaResult).
+        </p>
+        <img src="../images/case-study/Afbeelding1.png" />
+      </details>
+
+      <details style="margin-left: 2rem;">
+        <summary style="font-size: 1.5rem;font-weight: bold;">
+          Alle rollen van één server
+        </summary>
+        <img src="../images/case-study/Afbeelding2.png" />
+        <p style="margin-top: 0.25rem;">
+          Ik had dus de nodige code verzamelt om van één bepaalde rol de best
+          practices te scannen en te tonen. De volgende stap was om dit voor
+          alle geïnstalleerde rollen binnen één server te doen. Ik heb even op
+          internet gezocht en vond een commando om informatie over Windows
+          Server rollen te krijgen, namelijk Get-WindowsFeature. Hiermee kon ik
+          de “best practices model id” halen uit alle geïnstalleerde rollen.
+          Deze id’s had ik namelijk nodig als parameter voor de commando’s
+          Invoke-BPAModel en Get-BpaResult. Vervolgens voerde ik de code uit
+          voor iedere rol aan de hand van de code Foreach.
+        </p>
+      </details>
+
+      <details style="margin-left: 2rem;">
+        <summary style="font-size: 1.5rem;font-weight: bold;">
+          Alle rollen van alle servers
+        </summary>
+        <details style="margin-left: 2rem;">
+          <summary>Zonder functie met scan</summary>
+          <p>
+            Vervolgens probeerde ik dit met de code Foreach voor iedere server.
+            Hiervoor moest ik de computername in de commando’s als parameter
+            meegeven. Maar dit werkte niet voor het commando Invoke-BPAModel.
+            Dus moest ik opzoek naar een andere manier.
+          </p>
+          <script src="https://pastebin.com/embed_js/tBV3MrFi"></script>
+        </details>
+
+        <details style="margin-left: 2rem;">
+          <summary>Met functie zonder scan</summary>
+          <p>
+            Ik kwam op
+            <a
+              href="http://jeffwouters.nl/index.php/2014/02/get-remote-best-practice-analyzer-results-through-powershell/"
+              target="_blank"
+              >een website</a
+            >
+            waarop iemand twee functie had gecodeerd om de BPA-resultaten te
+            bekijken van alle servers. Ik wou alle objecten toevoegen aan een
+            list, maar dit lukte enkel op de server waarop je het script
+            uitvoerde. Het script maakte op iedere server namelijk een variabele
+            $list aan met daarin de objecten van die server.
+          </p>
+          <script src="https://pastebin.com/embed_js/3SgMCdRf"></script>
+        </details>
+
+        <details style="margin-left: 2rem;">
+          <summary>Met functiecode geïntegreerd</summary>
+          <p>
+            Ik heb voor een beter overzicht de functie verwijderd en de code uit
+            de functie in mijn code geïntegreerd. Vervolgens heb ik via
+            onderstaande manier
+            <a
+              href="https://stackoverflow.com/questions/49361404/append-to-a-variable-from-invoke-command"
+              target="_blank"
+              >(die ik hier vond)</a
+            >
+            alle objecten toch aan een $list kunnen toevoegen.
+          </p>
+          <script src="https://pastebin.com/embed_js/cNBSc9QD"></script>
+        </details>
+
+        <details style="margin-left: 2rem;">
+          <summary>Met scan</summary>
+          <p>
+            Tot nu toe ontbrak de scan nog van de rollen, we toonden enkel de
+            resultaten van een vorige scan. Daarom voegde ik de regel
+            Invoke-BPAModel $feature nog toe. Ik voegde ook de optie in om te
+            filteren op bepaalde “severity” en het formaat van de file met de
+            output te bepalen. Ook heb ik een aangepast bericht toegevoegd voor
+            een “ParameterBindingValidationException”.
+          </p>
+          <script src="https://pastebin.com/embed_js/rB2Tre3d"></script>
+        </details>
+      </details>
+    </section>
+
+    <section data-aos="fade-up">
+      <div class="row">
+        <div class="tbl">
+          <h1>RESULTAAT</h1>
+          <p>
+            We hebben het script getest en getimed op het netwerk binnen
+            Aurelium. Op 42 minuten heeft het script 12 servers gescand en de
+            resultaten in een html-file gezet (bijgevoegd bij opdracht). De
+            medewerkers van Aurelium waren er heel tevreden over en zullen het
+            binnenkort gebruiken bij hun klanten.<br /><br />
+
+            Het script kan u
+            <a href="https://github.com/ArneM-immalle/BPA" target="_blank"
+              >hier</a
+            >
+            bekijken.
+          </p>
+        </div>
+        <div class="tbl">
+          <h1>BRONNEN</h1>
+          <ul>
+            <li>
+              <a
+                href=" https://docs.microsoft.com/en-us/windows-server/administration/server-manager/run-best-practices-analyzer-scans-and-manage-scan-results"
+                target="_blank"
+                >docs.microsoft.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://devblogs.microsoft.com/scripting/use-powershell-to-replace-text-in-strings/"
+                target="_blank"
+                >devblogs.microsoft.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://jeffwouters.nl/index.php/2014/02/get-remote-best-practice-analyzer-results-through-powershell/"
+                target="_blank"
+                >jeffwouters.nl</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://stackoverflow.com/questions/49361404/append-to-a-variable-from-invoke-command"
+                target="_blank"
+                >stackoverflow.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.itprotoday.com/powershell/prompting-user-input-powershell"
+                target="_blank"
+                >itprotoday.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p style="text-align: center;">
+        Designed and developed by Arne Meylemans<br />© 2020
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
