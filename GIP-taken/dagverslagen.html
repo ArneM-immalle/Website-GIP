@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ArNet</title>
+    <link rel="icon" href="images/logo.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Coda&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/gip.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <style>
+      /* The actual timeline (the vertical ruler) */
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .timeline * {
+        box-sizing: border-box;
+        color: rgb(var(--text-color));
+      }
+
+      /* The actual timeline (the vertical ruler) */
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        background-color: rgb(var(--text-color));
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      /* Container around content */
+      .container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+
+      /* The circles on the timeline */
+      .container::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid rgb(var(--text-color));
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      /* Place the container to the left */
+      .left {
+        left: 0;
+      }
+
+      /* Place the container to the right */
+      .right {
+        left: 50%;
+      }
+
+      /* Add arrows to the left container (pointing right) */
+      .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent
+          rgb(var(--second-color));
+      }
+
+      /* Add arrows to the right container (pointing left) */
+      .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgb(var(--second-color)) transparent
+          transparent;
+      }
+
+      /* Fix the circle for containers on the right side */
+      .right::after {
+        left: -16px;
+      }
+
+      /* The actual content */
+      .content {
+        padding: 20px 30px;
+        border: 5px solid rgb(var(--second-color));
+        position: relative;
+        border-radius: 6px;
+      }
+
+      /* Media queries - Responsive timeline on screens less than 600px wide */
+      @media screen and (max-width: 600px) {
+        /* Place the timelime to the left */
+        .timeline::after {
+          left: 31px;
+        }
+
+        /* Full-width containers */
+        .container {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+
+        /* Make sure that all arrows are pointing leftwards */
+        .container::before {
+          left: 60px;
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent white transparent transparent;
+        }
+
+        /* Make sure all circles are at the same spot */
+        .left::after,
+        .right::after {
+          left: 15px;
+        }
+
+        /* Make all right containers behave like the left ones */
+        .right {
+          left: 0%;
+        }
+      }
+    </style>
+
+    <style>
+      table.mail tr th:nth-child(1) {
+        text-align: left;
+      }
+      table.mail tr th:nth-child(2) {
+        text-align: right;
+      }
+      p,
+      td {
+        text-align: justify;
+      }
+      h2 {
+        margin: 1.75rem 0 0.75rem 0;
+      }
+      a {
+        text-decoration: underline;
+      }
+
+      @media (min-width: 1000px) {
+        .article {
+          column-count: 2;
+          column-gap: 5%;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        .row .tbl:not(:nth-child(1)) {
+          margin-top: 3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="home">
+      <div class="info">
+        <h1 style="word-break: break-all;">DAGVERSLAGEN</h1>
+      </div>
+      <p class="path">
+        <a href="../index.html#internship">HOME</a> > DAGVERSLAGEN
+      </p>
+    </section>
+
+    <section
+      data-aos="fade-up"
+      style="width: 100%; margin: 10rem 0 10% 0 !important;"
+    >
+      <div style="width: 80%; margin-left: 10%;">
+        <h1>AURELIUM</h1>
+        <p>
+          Aurelium is een expert in het bedenken van ICT-oplossingen voor KMO’s
+          voor zo goed als elk aspect van hun ICT-infrastructuur. Wanneer een
+          KMO een probleem heeft, belt deze naar de helpdesk. Zij zullen een
+          ticket maken met daarin het probleem geschetst. De System Engineers
+          kunnen deze tickets bekijken via het programma "Microsoft Dynamics NAV
+          Classic" en deze proberen op te lossen. De taak van de Software
+          Engineers zal ik deze week meevolgen.
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="container left">
+          <div class="content">
+            <h2>2019-09-30</h2>
+            <p>
+              De eerste dag heb kennis gemaakt met veel nieuwe software zoals:
+            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://searchvirtualdesktop.techtarget.com/definition/Remote-Desktop-Connection-Manager-RDCMan"
+                  rel="nofollow"
+                  >Remote Desktop Connection Manager</a
+                >
+                (voor het op afstand beheren van servers van klanten);
+              </li>
+              <li>
+                <a href="https://www.teamviewer.com/nl/" rel="nofollow"
+                  >TeamViewer</a
+                >
+                (beheer van clientcomputers van klanten);
+              </li>
+              <li>
+                <a href="https://www.veeam.com/nl" rel="nofollow">Veeam</a>
+                (back-up oplossing);
+              </li>
+              <li>
+                <a href="https://www.carbonite.com/" rel="nofollow"
+                  >Carbonite</a
+                >
+                (back-up oplossing).
+              </li>
+            </ul>
+            <p>
+              De tickets die Bert (mijn stagebegeleider) en ik vandaag hebben
+              bekeken waren onder andere:
+            </p>
+            <ul>
+              <li>
+                een mailadres dat spam verstuurt → geblokkeerd via Microsoft
+                Partner Center
+              </li>
+              <li>
+                printserver die geen printers meer vindt door Windows update →
+                update gedeïnstalleerd
+              </li>
+              <li>
+                bedrijf waarbij firewall was aangepast → firewall terug
+                opengezet
+              </li>
+              <li>
+                kassa kon geen verbinding maken met printer → Virtual Port
+                Driver geïnstalleerd
+              </li>
+              <li>
+                gebruiker moest worden toegevoegd aan Acitive Directory en
+                Office 365 £3 en Advanced Threat Protection licentie geactiveerd
+                bij deze gebruiker via Microsoft 365 Admin Center
+              </li>
+              <li>
+                back-up services failed → Manueel checkpoint (Hyper-V) maken
+                lukt niet → herstart
+              </li>
+              <li>
+                printer moet automatisch landscape printen i.p.v. portrait →
+                test gedaan bij andere printers → overal doet hij automatisch,
+                behalve bij 1 niet
+              </li>
+              <li>
+                User Certificate aanvragen → inloggen met domainadmin anders
+                lukte niet
+              </li>
+              <li>
+                dagelijkse back-up failed →
+                <code>vssadmin list writers</code> in Powershell uitgevoerd →
+                sqlserverwriter gaf een error → server herstart → werkte
+              </li>
+              <li>...</li>
+            </ul>
+            <p>
+              Ik vond het een boeiende eerste stagedag. Mijn stagebegeleider,
+              Bert, heeft mij goed verwelkomd. Hij vertelde mij over het bedrijf
+              en hoe zij werken. Tijdens het oplossen van tickets heeft hij me
+              telkens de nodige achtergrondinfo gegeven o.a. over de software.
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>2019-10-01</h2>
+            <p>Ook vandaag heb ik nieuwe programma's leren kennnen:</p>
+            <ul>
+              <li>
+                <a
+                  href="https://www.trendmicro.com/nl_nl/business.html"
+                  rel="nofollow"
+                  >TrendMicro</a
+                >
+                (een antivirus- en online beveiligingsprogramma);
+              </li>
+              <li>
+                <a href="https://www.teamviewer.com/nl/" rel="nofollow"
+                  >Citrix</a
+                >
+                (IT-afdelingen respectievelijk gecentraliseerde desktops en
+                applicaties hosten → gebruikers overal toegang tot applicaties);
+              </li>
+              <li>
+                <a
+                  href="https://www.carbonite.com/products/mozy?origin=mozy.com"
+                  rel="nofollow"
+                  >Mozy</a
+                >
+                (back-ups centraal beheren);
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Event_Viewer"
+                  rel="nofollow"
+                  >Event Viewer</a
+                >
+                (gebeurtenislogboeken);
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Group_Policy"
+                  rel="nofollow"
+                  >Group Policy</a
+                >
+                (beheert werkomgeving van gebruikersaccounts en
+                computeraccounts).
+              </li>
+            </ul>
+            <p>
+              De tickets die Bert en ik vandaag hebben bekeken waren onder
+              andere:
+            </p>
+            <ul>
+              <li>
+                gebruiker verwijderd
+                <ul>
+                  <li>
+                    TrendMicro: licentie gebonden aan computer → Via
+                    <a href="https://trendmicro.com" rel="nofollow"
+                      >TrendMicro.com</a
+                    >
+                    bekeken welke computer van deze gebruiker was → op deze
+                    computer software verwijderd
+                  </li>
+                  <li>
+                    Office: licentie gebonden aan gebruiker → gebruikersaccount
+                    disabled (en niet verwijderd) → mailbox nog 30 dagen
+                    beschikbaar
+                  </li>
+                </ul>
+              </li>
+              <li>
+                bedrijf kon niet aanmelden met Citrix → oorzaak nog niet
+                gevonden
+              </li>
+              <li>
+                bedrijf met eigen mailserver → na inloggen → pagina niet
+                gevonden → blijkbaar waren die nacht updates geïnstalleerd →
+                computer zou volgens Event Viewer 15 minuten na installatie
+                herstarten, maar er was nog een gebruiker aangemeld → updates
+                konden niet gebeuren → met Group Policy ingesteld om te
+                voorkomen voor volgende keer
+              </li>
+              <li>
+                van Mozy overschakelen naar Carbonite → oude backups zolang
+                mogelijk bewaren → wekelijks controleren
+              </li>
+              <li>Veaam: daily backup → werkte eerst niet, plots wel</li>
+              <li>
+                printer (van een ticket van gisteren) printte plots wel
+                automatisch landscape
+              </li>
+              <li>...</li>
+            </ul>
+            <p>
+              Vandaag heb ik met de hulp van Bert verbinding kunnen maken met
+              een server binnen Aurelium via de Remote Desktop Connection
+              Manager. Hierop mocht ik een beetje "spelen". Ik heb weer kennis
+              gemaakt met nieuwe programma's. Group Policy vond ik zeer
+              interessante software.
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://raw.githubusercontent.com/ArneM-immalle/GIP-Website/master/Remote%20Desktop%20Connection%20Manager.png"
+                ><img
+                  src="https://raw.githubusercontent.com/ArneM-immalle/GIP-Website/master/Remote%20Desktop%20Connection%20Manager.png"
+                  alt="alttext"
+                  style="max-width:100%;"
+              /></a>
+            </p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h2>2019-10-02</h2>
+            <p>
+              Vandaag heb ik vooral gewerkt aan mijn Case-study. Ik heb de
+              opdracht gekregen van Bert om via een PowerShell script de best
+              practices te scannen van <strong>alle</strong> servers binnen een
+              netwerk en te tonen. Best practices zijn de richtlijnen die worden
+              beschouwd als de ideale manier om onder normale omstandigheden een
+              server te configureren. Het is best interessant om op deze manier
+              te ontdekken wat er allemaal mogelijk mee is. Dit script zou
+              binnenkort gebruikt worden door Aurelium. Ik kan mijn script
+              testen op één van hun servers waar ik gisteren toegang op heb
+              gekregen.
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://raw.githubusercontent.com/ArneM-immalle/GIP-Website/master/Remote%20Desktop%20Connection%20Manager%20-%20V1.png"
+                ><img
+                  src="https://raw.githubusercontent.com/ArneM-immalle/GIP-Website/master/Remote%20Desktop%20Connection%20Manager%20-%20V1.png"
+                  alt="alttext"
+                  style="max-width:100%;"
+              /></a>
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>2019-10-03</h2>
+            <p>
+              Vandaag hebben Bert en ik zoals gewoonlijk tickets behandeld. Eén
+              van de interessantste tickets ging over een probleem binnen een
+              <a
+                href="https://searchstorage.techtarget.com/definition/storage-area-network-SAN"
+                rel="nofollow"
+                >Storage Area Network (SAN)</a
+              >, er was namelijk een schijf binnen de opslag gecrasht. Deze zou
+              dus vervangen moeten worden door een medewerk van Dell. Om Dell te
+              contacteren had Bert een rapport (DGO-file) nodig dat gegenereerd
+              werd via
+              <a
+                href="https://www.sanstorageworks.com/EqualLogic-Array-Software.asp"
+                rel="nofollow"
+                >Dell Equallogic Group</a
+              >. Deze heeft hij vervolgens doorgestuurd naar Dell, zij komen de
+              harde schijf morgen normaal vervangen.
+            </p>
+            <p>
+              Ik vond dit een interessant ticket omdat we vorig schooljaar al
+              veel geleerd hebben over
+              <a
+                href="https://nl.wikipedia.org/wiki/Redundant_array_of_independent_disks"
+                rel="nofollow"
+                >RAID</a
+              >. In dit geval ging het over RAID 50, dat is een combinatie van
+              RAID 5 en mirroring.
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/ArneM-immalle/GIP-Website/blob/master/SAN_1.png?raw=true"
+                ><img
+                  src="https://github.com/ArneM-immalle/GIP-Website/raw/master/SAN_1.png?raw=true"
+                  alt="alttext"
+                  style="max-width:100%;"
+              /></a>
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/ArneM-immalle/GIP-Website/blob/master/SAN_2.png?raw=true"
+                ><img
+                  src="https://github.com/ArneM-immalle/GIP-Website/raw/master/SAN_2.png?raw=true"
+                  alt="alttext"
+                  style="max-width:100%;"
+              /></a>
+            </p>
+            <p>
+              Ook vandaag heb ik veel gewerkt aan mijn script. Ik ben de dag
+              geëindigd met een test waarbij de rollen van
+              <strong>alle</strong> servers binnen het netwerk gescand werden.
+              Vervolgens zou in een HTML-file het resultaat van de inbreuken op
+              de best practices verschijnen. Morgen zullen we zien of het
+              gewerkt heeft...
+            </p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h2>2019-10-04</h2>
+            <p>
+              Vandaag heb ik in het grote script waar Aurelium al 5 jaar lang
+              aan werkt mogen kijken. Het bevatte meer als 5000 regels en is
+              enkel bedoelt om server-instellingen te controleren. Er wordt
+              niets aangepast aan de server-instellingen, dat vinden ze te
+              gevaarlijk. Binnenkort zal hier mijn BPA-script (mijn case-study)
+              in komen te staan.
+            </p>
+            <p>
+              De tickets die Bert en ik vandaag hebben bekeken waren onder
+              andere:
+            </p>
+            <ul>
+              <li>
+                Printserver werkte niet meer → deze update ge-deinstalleerd en
+                geblokkeerd
+              </li>
+              <li>
+                Gebruiker kon niet inloggen bij (Microsoft Azure) ObD Quality
+                Kick → een permissie "User.Read.All" toegevoegd + Admin grant
+                gedaan
+              </li>
+              <li>
+                Virtuele server met minder dan 100 GB vrij → gekeken of er
+                voldoende ruimte beschikbaar was op de fysieke server (ja) → via
+                Hyper-V harde schijf meer ruimte gegeven + partition vergroot
+                bij disk management
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p style="text-align: center;">
+        Designed and developed by Arne Meylemans<br />© 2020
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
