@@ -47,6 +47,7 @@ section#internship {
   -moz-transition: 250ms ease-in-out;
   -ms-transition: 250ms ease-in-out;
   -o-transition: 250ms ease-in-out;
+  outline: 0;
 }
 
 #internship .list .tbl:hover {
