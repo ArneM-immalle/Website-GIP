@@ -1,0 +1,20 @@
+footer {
+    z-index: 11;
+    margin-top: 5%;
+    height: 25%;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+    background-color: rgb(var(--text-color));
+}
+
+footer p {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

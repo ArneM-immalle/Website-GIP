@@ -18,10 +18,14 @@ section#internship {
   font-size: 2.3rem;
 }
 
-#internship .quote-mark {
-  font-size: 7rem;
-  line-height: 5rem;
+#internship .quote-mark i {
+  font-size: 3rem;
+  line-height: 3rem;
   color: rgba(var(--text-color), 0.6);
+}
+
+#internship .quote-text {
+  margin-right: 0;
 }
 
 #internship .quote-author {
@@ -59,7 +63,7 @@ section#internship {
   -o-transform: translateY(-10px);
 }
 
-#internship .tbl i {
+#internship .list .tbl i {
   font-size: 3rem;
   line-height: 3rem;
   padding: 1.5rem;
@@ -99,13 +103,27 @@ section#internship {
   color: rgba(var(--text-color), 0.7)
 }
 
+@media (min-width: 1000px) {
+  #internship .quote .quote-mark {
+    position: relative;
+    height: auto;
+  }
+  #internship .quote .im-quote-right {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 @media (max-width: 1000px) {
+  #internship h1.title {
+    margin-top: 4rem;
+  }
   #internship .quote .quote-mark {
     line-height: 1rem;
   }
   #internship .quote {
     margin-top: 7rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
   #internship .quote-author {
     margin-bottom: 5rem;
