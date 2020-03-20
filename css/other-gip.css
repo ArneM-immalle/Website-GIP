@@ -1,0 +1,46 @@
+section#other-gip {
+  width: 100%;
+  margin: 0 0 10% 0;
+  padding: 1rem 0;
+  background-color: rgb(var(--second-color));
+}
+
+#other-gip .tbl {
+  background-color: white;
+  position: relative;
+  height: 6rem;
+  width: calc(100%-4rem);
+  margin: 1rem 2rem;
+  transition: 250ms ease-in-out;
+  -webkit-transition: 250ms ease-in-out;
+  -moz-transition: 250ms ease-in-out;
+  -ms-transition: 250ms ease-in-out;
+  -o-transition: 250ms ease-in-out;
+  outline: 0;
+}
+
+#other-gip .tbl:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: 250ms ease-in-out;
+  box-shadow: 0px 10px 37px -20px rgba(0, 0, 0, 0.39);
+}
+
+#other-gip .tbl h1 {
+  color: rgb(var(--text-color));
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: unset;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+}

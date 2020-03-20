@@ -32,17 +32,11 @@
 
 #contact .mail {
     margin: 0 2rem 0 0;
+    text-align: right;
 }
 
 #contact .info {
     margin: 0 0 0 2rem;
-}
-
-@media screen and (min-width: 1000px) {
-    #contact .contact-form {
-        width: 65%;
-        margin-left: 35%;
-    }
 }
 
 #contact .info i {
@@ -57,53 +51,8 @@
     margin-left: 1rem;
 }
 
-#contact .container .mail {
-    text-align: right;
-}
-
 #contact .info .line {
     margin-bottom: 3rem;
-}
-
-@media (max-width: 1000px) {
-    #contact .info {
-        text-align: center;
-        float: unset;
-        margin-left: 0%;
-        margin-top: 5%;
-    }
-    #contact .info i {
-        font-size: 32px;
-        color: rgb(var(--text-color));
-        float: unset;
-    }
-    #contact .info p {
-        padding: 0 0 0 0;
-        line-height: 20px;
-        margin-bottom: 10%;
-        margin-left: 0;
-    }
-}
-
-@media (min-width: 1000px) {
-    .body .tbl-left {
-        margin-top: 1rem;
-        -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-        flex: 50%;
-        float: left;
-        text-align: right;
-    }
-    .body .tbl-right {
-        float: right;
-        text-align: left;
-        -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-        flex: 50%;
-    }
-    #contact .info p {
-        margin-bottom: 3.2rem;
-    }
 }
 
 #contact form input, #contact form textarea {
@@ -114,7 +63,7 @@
     border: none;
     transition: 0.7s;
     border-bottom: 0.2rem solid rgb(54, 56, 58);
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 1rem;
     margin-bottom: 1rem;
     width: 96%;
     max-width: 96%;
@@ -147,7 +96,36 @@
     cursor: pointer;
 }
 
+.body .calendar .tbl-left {
+    margin-top: 1rem;
+    -webkit-box-flex: 50%;
+    -ms-flex: 50%;
+    flex: 50%;
+    float: left;
+    text-align: right;
+}
+
 @media (max-width: 1000px) {
+    #contact .mail {
+        margin: 0;
+    }
+    #contact .info {
+        text-align: center;
+        float: unset;
+        margin: 0;
+        margin-top: 5%;
+    }
+    #contact .info i {
+        font-size: 32px;
+        color: rgb(var(--text-color));
+        float: unset;
+    }
+    #contact .info p {
+        padding: 0 0 0 0;
+        line-height: 20px;
+        margin-bottom: 10%;
+        margin-left: 0;
+    }
     #contact form input[type="button"] {
         margin-bottom: 3rem;
     }
@@ -156,11 +134,27 @@
     }
 }
 
-.body .calendar .tbl-left {
-    margin-top: 1rem;
-    -webkit-box-flex: 50%;
-    -ms-flex: 50%;
-    flex: 50%;
-    float: left;
-    text-align: right;
+@media (min-width: 1000px) {
+    .body .tbl-left {
+        margin-top: 1rem;
+        -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+        flex: 50%;
+        float: left;
+        text-align: right;
+    }
+    .body .tbl-right {
+        float: right;
+        text-align: left;
+        -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+        flex: 50%;
+    }
+    #contact .info p {
+        margin-bottom: 3.2rem;
+    }
+    #contact .contact-form {
+        width: 65%;
+        margin-left: 35%;
+    }
 }

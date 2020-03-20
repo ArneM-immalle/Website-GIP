@@ -27,6 +27,30 @@
     box-shadow: 0 30px 100px -20px rgba(0, 0, 0, 0.55);
 }
 
+table.mail tr th:nth-child(1) {
+    text-align: left;
+}
+
+table.mail tr th:nth-child(2) {
+    text-align: right;
+}
+
+p, td {
+    text-align: justify;
+}
+
+h2 {
+    margin: 1.75rem 0 0.75rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: underline;
+}
+
 @media (min-width: 1000px) {
     #home {
         height: 14.2rem;
@@ -46,6 +70,10 @@
     }
     #home .info .text {
         text-align: center;
+    }
+    .article {
+        column-count: 2;
+        column-gap: 5%;
     }
 }
 
@@ -85,5 +113,8 @@
     }
     #home .info .text * {
         text-align: center;
+    }
+    .row .tbl:not(:nth-child(1)) {
+        margin-top: 3rem;
     }
 }
