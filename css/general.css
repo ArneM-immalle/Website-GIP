@@ -25,6 +25,10 @@ section:not(#home) {
     width: 80%;
 }
 
+section:last-of-type {
+    margin-bottom: 10rem !important;
+}
+
 @media (min-width: 1000px) {
     .row {
         display: flex;
