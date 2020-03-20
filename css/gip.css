@@ -14,8 +14,13 @@
     text-align: center;
 }
 
+section:not(#home) p {
+    margin-top: 0;
+    line-height: 1.3rem;
+}
+
 #home .info p {
-    margin-top: 0.5rem;
+    margin-top: 0.5rem !important;
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.2rem;
 }
@@ -116,5 +121,8 @@ a {
     }
     .row .tbl:not(:nth-child(1)) {
         margin-top: 3rem;
+    }
+    .mobile-not {
+        display: none;
     }
 }
