@@ -17,102 +17,181 @@
     />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css"
+    />
+
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
 
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/gip.css" />
     <link rel="stylesheet" href="../css/footer.css" />
-
+    
     <style>
       img {
         position: relative;
         object-fit: cover;
-        max-height: 17rem;
+        max-height: 17.5rem;
+      }
+      @media (min-width: 1000px) {
+        .photo {
+          width:65%;
+          margin-right: 2.5%;
+          align-items: center;
+        }
+        .photo-info {
+          width:30%;
+          margin-left: 2.5%;
+          background-color: rgb(var(--second-color));
+        }
+        .photo-info * {
+        color: white;
+        }
+      }
+      .owl-dots{
+        display: none;
+      }
+      .photo-info a {
+        text-decoration: none;
       }
     </style>
   </head>
 
-  <body>
-    <section id="home">
-      <div class="info">
-        <h1 style="word-break: break-all;">REPORTAGE PHOTO</h1>
-      </div>
-      <p class="path">
-        <a href="../index.html#internship">HOME</a> > REPORTAGE PHOTO
-      </p>
-    </section>
+  <section id="home">
+    <div class="info">
+      <h1 style="word-break: break-all;">REPORTAGE PHOTO</h1>
+    </div>
+    <p class="path">
+      <a href="../index.html#internship">HOME</a> > REPORTAGE PHOTO
+    </p>
+  </section>
 
-    <section data-aos="fade-up">
-      <h1>AURELIUM</h1>
-      <div class="row">
-        <div class="tbl">
-          <img src="../images/reportage-photo/Afbeelding1.jpg" />
-          <p>
-            Le bâtiment est très moderne et il y a beaucoup de fenêtres. Il a
-            deux étages et à l'arrière se trouve un grand parking. Aurelium est
-            facilement accessible. C'est situé à la sortie d'une autoroute.​
-          </p>
-        </div>
-        <div class="tbl">
-          <img src="../images/reportage-photo/Afbeelding2.jpg" />
-          <p>
-            Lorsque vous entrez, vous verrez un panneau indiquant qu'Aurelium se
-            trouve au deuxième étage. Si vous ne voulez pas marcher, vous pouvez
-            prendre l'ascenseur. Sinon vous pouvez prendre les escaliers.​
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="tbl">
-          <img src="../images/reportage-photo/Afbeelding3.jpg" />
-          <p>
-            Tous les ingénieurs en logiciel travaillent dans une salle commune.
-            Celui qui travaille ici a trois écrans connectés à un ordinateur
-            portable. Si vous avez besoin d'une pause, vous pouvez jouer aux
-            fléchettes.​
-          </p>
-        </div>
-        <div class="tbl">
-          <img src="../images/reportage-photo/Afbeelding4.jpg" />
-          <p>
-            A midi, nous pouvons manger dans cette salle de détente. Nous jouons
-            ensuite à un jeu de baby-foot. Nous sommes libres de choisir à
-            quelle heure nous mangeons et quand nous recommençons à travailler.​
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="tbl">
-          <img src="../images/reportage-photo/Afbeelding5.jpg" />
-          <p>
-            Si vous avez soif, vous pouvez toujours aller prendre un verre dans
-            la cuisine. Vous avez le choix entre le café, le thé, le lait au
-            chocolat, l’eau plate et l’eau pétillante. Ici, vous trouverez
-            également un four micro-ondes et un réfrigérateur.​
-          </p>
-        </div>
-        <div class="tbl">
-          <img
-            src="https://www.aurelium.be/sites/default/files/styles/team_square/public/2016-08/bert-square.png?itok=2Kpz058s"
-          />
-          <p>
-            Bert était mon superviseur de stage pendant cette semaine. Il sait
-            beaucoup sur les ordinateurs et m'a beaucoup appris cette semaine.
-            Ensemble, nous avons résolu les problèmes informatiques des clients
-            et nous avons aussi programmé.​
-          </p>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h1>AURELIUM</h1>
+    <div class="row">
 
-    <footer>
-      <p style="text-align: center;">
-        Designed and developed by Arne Meylemans<br />© 2020
-      </p>
-    </footer>
+      <div class="photo">
+                    
+        <div class="owl-carousel slide-one-item" style="width:75%;display:block;margin:auto;">
+          <img src="../images/reportage-photo/Afbeelding1.jpg" alt="" />
+          <img src="../images/reportage-photo/Afbeelding2.jpg" alt="" />
+          <img src="../images/reportage-photo/Afbeelding3.jpg" alt="" />
+          <img src="../images/reportage-photo/Afbeelding4.jpg" alt="" />
+          <img src="../images/reportage-photo/Afbeelding5.jpg" alt="" />
+          <img src="https://www.aurelium.be/sites/default/files/styles/team_square/public/2016-08/bert-square.png?itok=2Kpz058s" alt="" />
+        </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+      </div>
+
+      <div class="photo-info">
+        <div style="display:block;margin:auto;padding: 2rem 2rem 0 2rem;">
+          <div class="owl-carousel slide-one-item-text">
+            <div class="slide-text">
+              <p>Le bâtiment est très moderne et il y a beaucoup de fenêtres. Il a
+                deux étages et à l'arrière se trouve un grand parking. Aurelium est
+                facilement accessible. C'est situé à la sortie d'une autoroute.</p>
+            </div>
+            <div class="slide-text">
+              <p>Lorsque vous entrez, vous verrez un panneau indiquant qu'Aurelium se
+                trouve au deuxième étage. Si vous ne voulez pas marcher, vous pouvez
+                prendre l'ascenseur. Sinon vous pouvez prendre les escaliers.</p>
+            </div>
+            <div class="slide-text">
+              <p>Tous les ingénieurs en logiciel travaillent dans une salle commune.
+                Celui qui travaille ici a trois écrans connectés à un ordinateur
+                portable. Si vous avez besoin d'une pause, vous pouvez jouer aux
+                fléchettes.</p>
+            </div>
+            <div class="slide-text">
+              <p>Si vous avez soif, vous pouvez toujours aller prendre un verre dans
+                la cuisine. Vous avez le choix entre le café, le thé, le lait au
+                chocolat, l’eau plate et l’eau pétillante. Ici, vous trouverez
+                également un four micro-ondes et un réfrigérateur.​</p>
+            </div>
+            <div class="slide-text">
+              <p>Bert était mon superviseur de stage pendant cette semaine. Il sait
+                beaucoup sur les ordinateurs et m'a beaucoup appris cette semaine.
+                Ensemble, nous avons résolu les problèmes informatiques des clients
+                et nous avons aussi programmé.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p style="text-align: center;">
+      Designed and developed by Arne Meylemans<br />© 2020
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    jQuery(document).ready(function($) {
+      var siteCarousel = function() {
+
+        $(".slide-one-item").owlCarousel({
+          center: false,
+          items: 1,
+          loop: true,
+          stagePadding: 0,
+          margin: 10,
+          smartSpeed: 1000,
+          pauseOnHover: true,
+          onDragged: function(event) {
+            console.log("event : ", event.relatedTarget["_drag"]["direction"]);
+            if (event.relatedTarget["_drag"]["direction"] == "left") {
+              $(".slide-one-item-text").trigger("next.owl.carousel");
+            } else if (event.relatedTarget["_drag"]["direction"] == "right") {
+              $(".slide-one-item-text").trigger("prev.owl.carousel");
+            }
+          }
+        });
+
+        $(".slide-one-item-text").owlCarousel({
+          center: false,
+          items: 1,
+          loop: true,
+          stagePadding: 0,
+          margin: 10,
+          smartSpeed: 1000,
+          pauseOnHover: true,
+          onDragged: function(event) {
+            console.log("event : ", event.relatedTarget["_drag"]["direction"]);
+            if (event.relatedTarget["_drag"]["direction"] == "left") {
+              $(".slide-one-item").trigger("next.owl.carousel");
+            } else if (event.relatedTarget["_drag"]["direction"] == "right") {
+              $(".slide-one-item").trigger("prev.owl.carousel");
+            }
+          }
+        });
+
+        $(".custom-next").click(function(e) {
+          e.preventDefault();
+          $(".slide-one-item").trigger("next.owl.carousel");
+          $(".slide-one-item-text").trigger("next.owl.carousel");
+        });
+        $(".custom-prev").click(function(e) {
+          e.preventDefault();
+          $(".slide-one-item").trigger("prev.owl.carousel");
+          $(".slide-one-item-text").trigger("prev.owl.carousel");
+        });
+      };
+      siteCarousel();
+    });
+
+  </script>
+  <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/highlight.js"></script>
+  <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/js/app.js"></script>
+</body>
 </html>

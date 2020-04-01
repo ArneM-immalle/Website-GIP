@@ -21,6 +21,78 @@
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/gip.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+
+    <style>
+      .faq-q {
+        border-top: 2px dashed;
+        border-color: rgb(var(--second-color)) !important;
+        margin: 0;
+        padding: 30px;
+        counter-increment: section;
+        position: relative;
+      }
+
+      .faq-q h2 {
+        font-size: 22px;
+      }
+
+      .faq-q:nth-child(even):before {
+        content: counter(section);
+        right: 100%;
+        margin-right: -20px;
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px;
+        height: 20px;
+        width: 20px;
+        background-color: rgb(var(--second-color));
+        text-align: center;
+        color: white;
+        font-size: 110%;
+      }
+
+      .faq-q:nth-child(odd):before {
+        content: counter(section);
+        left: 100%;
+        margin-left: -20px;
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px;
+        height: 20px;
+        width: 20px;
+        background-color: rgb(var(--second-color));
+        text-align: center;
+        color: white;
+        font-size: 110%;
+      }
+
+      .faq-q:nth-child(even) {
+        border-left: 2px dashed;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        margin-right: 30px;
+        padding-right: 0;
+      }
+
+      .faq-q:nth-child(odd) {
+        border-right: 2px dashed;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        margin-left: 30px;
+        padding-left: 0;
+      }
+
+      .faq-q:first-child {
+        border-top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+
+      .faq-q:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    </style>
   </head>
 
   <body>
@@ -37,58 +109,50 @@
 
     <section data-aos="fade-up">
       <p>
-        Voici les questions fréquemment posées et leurs réponses
-        correspondantes. Vous êtes invités à les lire attentivement. Peut-être
-        que votre question a déjà reçu une réponse ici. Sinon, vous pouvez
-        toujours me contacter à l'adresse arne.meylemans@immalle.be.
+        Résolvez vos doutes en consultant les questions les plus courantes.
       </p>
 
-      <div class="row">
-        <div class="tbl">
-          <h2>Comment créer un class notebook ?</h2>
+      <div class="faq">
+        <div class="faq-q">
+          <h2>Comment est-ce que je peux créer un class notebook ?</h2>
           <p>
             Si vous créez un team en Teams, un class notebook est créé
-            automatiquement. Pour ce faire, appuyez d'abord deux fois sur le
-            bouton "Teams". Ensuite, appuyez sur le bouton "Devenir un membre ou
-            créer un Team". Après choisissez un Team pour les groupes de leçons
-            et suivez les instructions. Enfin, appuyez sur "Créez un Class
-            Notebook" et suivez les instructions.
+            automatiquement. Pour créer un team, appuyez d'abord deux fois sur
+            le bouton "Teams". Ensuite, appuyez sur le bouton "Devenez un membre
+            ou créez un Team". Après choisissez un Team pour les groupes de
+            leçons et suivez les instructions. Enfin, appuyez sur "Créez un
+            Class Notebook" et suivez les instructions.
           </p>
         </div>
-        <div class="tbl">
+
+        <div class="faq-q">
           <h2>Où puis-je noter le matériel de cours ?</h2>
           <p>
             Notez tout le matériel de cours (que les étudiants sont seulement
-            autorisés à lire) dans le section group "_Content Library".
+            autorisés à lire) dans la section group "_Content Library".
           </p>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="tbl">
+        <div class="faq-q">
           <h2>Mes étudiants peuvent collaborer à un projet où?</h2>
           <p>
-            Les élèves peuvent collaborer à un projet dans le section group
+            Les élèves peuvent collaborer à un projet dans la section group
             "_Collaboration space". Ici, ils ont le droit de lire et d'écrire.
           </p>
         </div>
-        <div class="tbl">
+
+        <div class="faq-q">
           <h2>Puis-je donner des tâches individuelles aux étudiants ?</h2>
           <p>
-            Oui, lors de la création d'un Class Notebook, un section group est
-            créé pour chaque élève. Seuls vous et l'étudiant en question avez
-            accès à ce section group.
+            Oui, lors de la création d'un Class Notebook, une section group est
+            créé pour chaque élève. Seuls vous et l'étudiant spécifique avez
+            accès à ce section group. Si vous souhaitez qu'une page soit remplie
+            individuellement par vos élèves, vous cliquez sur distribuer sous
+            l'onglet Class Notebook. De cette façon, cette page est créée dans
+            la section individuelle de chaque élève.
           </p>
         </div>
       </div>
-
-      <h2>Comment assigner des tâches aux étudiants ?</h2>
-      <p>
-        Si vous souhaitez qu'une page soit remplie individuellement par vos
-        élèves, cliquez sur distribuer sous l'onglet Class Notebook. De cette
-        façon, cette page est créée dans la section individuelle de chaque
-        élève.
-      </p>
     </section>
 
     <footer>

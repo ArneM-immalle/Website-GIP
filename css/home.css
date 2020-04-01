@@ -10,7 +10,7 @@
   margin: 0;
 }
 
-#home .info p {
+#home .info p, #home .info a {
   margin-top: 0.5rem;
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.2rem;
