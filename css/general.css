@@ -4,7 +4,8 @@
     --background-color: 246, 246, 246;
 }
 
-html, body {
+html,
+body {
     scroll-behavior: smooth;
     height: 100%;
     margin: 0;
@@ -32,11 +33,13 @@ section:last-of-type {
 @media (min-width: 1000px) {
     .row {
         display: flex;
+        flex-flow: row wrap;
     }
+
     .tbl {
         float: left;
-        margin-right: 5%;
-        flex: 45%;
+        margin: 2.5%;
+        flex: 15%;
     }
 }
 
@@ -65,7 +68,9 @@ table {
     border-collapse: collapse;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 0px solid rgb(var(--text-color));
     padding-left: 4px;
 }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>ArNet</title>
+  <link rel="icon" href="images/logo.png" sizes="16x16" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Coda&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/general.css" />
+  <link rel="stylesheet" href="../css/gip.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+
+  <style>
+    img {
+      width: 100%;
+    }
+
+    @media (min-width: 1000px) {
+      .tbl {
+        flex: 45%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section id="home">
+    <div class="info">
+      <h1 style="word-break: break-all;">TESTOPSTELLING</h1>
+    </div>
+    <p class="path"><a href="../index.html#internship">HOME</a> > TESTOPSTELLING</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <div class="row">
+      <div class="tbl">
+        <h1>OVERZICHT HOST-CONFIGURATIE</h1>
+        <img src="../images/testopstelling/Afbeelding1.png" />
+      </div>
+      <div class="tbl">
+        <h1>Router configureren</h1>
+        <div style="display:flex;">
+          <div style="flex:67%;">
+            <img src="../images/testopstelling/Afbeelding2.png" />
+          </div>
+          <div style="flex:28%;">
+            <img src="../images/testopstelling/Afbeelding3.png" />
+            <img src="../images/testopstelling/Afbeelding4.png" />
+          </div>
+        </div>
+        <p>LokNet is een interne switch. Deze verbindt de router met een client (LAN). De router is ook verbonden met
+          de Standaard schakeloptie. Op deze manier kan de router verbinding maken met het internet (WAN). Hieronder
+          ziet u dat het daardoor mogelijk is om te pingen naar een server via het internet.
+        </p>
+        <img src="../images/testopstelling/Afbeelding5.png" />
+      </div>
+      <div class="tbl">
+        <h1>CLIENT CONFIGURATIE</h1>
+        <div style="display:flex;">
+          <div style="flex:40%;">
+            <img src="../images/testopstelling/Afbeelding6.png" />
+          </div>
+          <div style="flex:60%;">
+            <img src="../images/testopstelling/Afbeelding7.png" />
+          </div>
+        </div>
+        <p>
+          Vervolgens hebben we ingesteld dat de client (die via de switch ‘LokNet’ verbonden is) automatisch een
+          IP-adres en een DNS-server laat toewijzen.
+          Vervolgens voerden we in PowerShell het commando ‘ipconfig /all’ uit en viel op dat het IPv4 adres waren
+          gewijzigd. De client had namelijk een DHCP-server gevonden en heeft zich hiermee geconnecteerd.
+        </p>
+        <div style="display:flex;">
+          <div style="flex:55%;margin-right:5%;">
+            <p>Nu heeft de client dankzij de router (die aangesloten is met de standaard schakeloptie)
+              internetverbinding. Dit kunnen we testen met ping.</p>
+          </div>
+          <div style="flex:40%;">
+            <img src="../images/testopstelling/Afbeelding8.png" />
+          </div>
+        </div>
+        <p>We kunnen nu ook via de client de instellingen van de router wijzigen:</p>
+        <img src="../images/testopstelling/Afbeelding9.png" />
+        <img src="../images/testopstelling/Afbeelding10.png" />
+      </div>
+      <div class="tbl">
+        <h1>TWITTER-EXPERIMENT</h1>
+        <p style="font-weight:bold;margin:1rem 0 0 0">Er werd gelogd wanneer ik verbond met 104.244.42.1:</p>
+        <img src=" ../images/testopstelling/Afbeelding11.png" />
+        <p style="margin:1rem 0 0 0">Instellingen hiervoor:</p>
+        <img src="../images/testopstelling/Afbeelding12.png" />
+        <p style="font-weight:bold;margin:1.5rem 0 0 0">Ik kon niet meer verbinden met 104.244.42.1:</p>
+        <img src=" ../images/testopstelling/Afbeelding13.png" />
+        <p style="margin:1rem 0 0 0">Instellingen hiervoor:</p>
+        <img src="../images/testopstelling/Afbeelding14.png" />
+      </div>
+      <div class="tbl">
+        <h1>LOKSERV TOEGEVOEGD</h1>
+        <p style="margin:1rem 0 0 0">Eerst heb ik een privé-switch aangemaakt, met de naam ‘LokServ’. Deze heb ik
+          gekoppeld aan de router en aan
+          een nieuwe WinServ.</p>
+        <img src="../images/testopstelling/Afbeelding15.png" />
+        <p style="margin:1rem 0 0 0">Vervolgens heb ik bij deze nieuwe WinServ de eigenschappen aangepast van IPv4 zodat
+          deze een statisch
+          IP-adres heeft.</p>
+        <img src="../images/testopstelling/Afbeelding16.png" />
+        <p style="margin:1rem 0 0 0">Nadien heb ik op de WinClient de interface ‘LokServ’ toegevoegd.</p>
+        <img src="../images/testopstelling/Afbeelding17.png" />
+        <p style="margin:1rem 0 0 0">Vervolgens heb ik de firewall-rules ingesteld voor de nieuwe interface ‘LokServ’.
+        </p>
+        <img src="../images/testopstelling/Afbeelding18.png" />
+        <img src="../images/testopstelling/Afbeelding19.png" />
+        <p style="margin:1rem 0 0 0">Tenslotte had ik internet op de WinServ.</p>
+        <img src="../images/testopstelling/Afbeelding20.png" />
+      </div>
+      <div class="tbl">
+        <h1>EXTRA: EEN NAS</h1>
+        <p style="margin:1rem 0 0 0">Om een gedeelde map te maken op de WinServ, die beschikbaar is op de WinClient heb ik eerst een nieuwe 'Storage Pool' toegevoegd in 'Server Manager' nadat ik eerst een virtuele harde schijf had toegevoegd in 'Hyper-V' aan de WinServ.</p>
+        <img src="../images/testopstelling/Afbeelding22.png" />
+        <p style="margin:1rem 0 0 0">Vervolgens maak ik een nieuwe 'Virtual Disk'.</p>
+        <img src="../images/testopstelling/Afbeelding23.png" />
+        <p style="margin:1rem 0 0 0">Nu maak ik een 'New Volume'.</p>
+        <img src="../images/testopstelling/Afbeelding24.png" />
+        <p style="margin:1rem 0 0 0">Nadien maakte ik een nieuwe share.</p>
+        <img src="../images/testopstelling/Afbeelding25.png" />
+        <p style="margin:1rem 0 0 0">Tenslotte geef ik de Administrators alle rechten in deze share.</p>
+        <img src="../images/testopstelling/Afbeelding26.png" />
+        <p style="margin:1rem 0 0 0">Ik kan nu bestanden bewerken vanaf mijn WinClient in deze gesharede map van de WinServ.</p>
+        <img src="../images/testopstelling/Afbeelding21.png" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p style="text-align: center;">
+      Designed and developed by Arne Meylemans<br />© 2020
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
