@@ -13,6 +13,26 @@
 
   <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script>
+    function ContactSubmit() {
+      var name = $("#name").val();
+      var email = $("#email").val();
+      var message = $("#message").val();
+      $.post(
+        "php/submit.php",
+        {
+          name: name,
+          email: email,
+          message: message
+        },
+        function(data) {
+          $("#contactform")[0].reset();
+        }
+      );
+    }
+  </script>
+
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/general.css" />
@@ -36,6 +56,9 @@
       </button>
       <ul class="top-menu" id="top-menu">
         <li><a href="#">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#internship">GIP</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -46,14 +69,143 @@
       <div class="text">
         <h1>ARNE MEYLEMANS</h1>
         <p>
-          <a href="GIP-taken/welkomsttekst.html">
             Ik ben zeventien jaar oud en woon in Sint-Antonius. Ik ben al een
             heel lange tijd gebeten door de digitale wereld. Dagelijks kom ik
             hiermee in contact, niet zo vreemd is dan ook dat ik de richting
             IT en Netwerken volg in het Immaculata Secundair te Oostmalle ...
-            lees verder
-          </a>
+            <a style="text-decoration: underline;" href="GIP-taken/welkomsttekst.html">lees verder</a>
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <div class="row">
+      <div class="tbl">
+        <h1>ABOUT ME</h1>
+        <details open>
+          <summary>Competenties</summary>
+          <table class="competenties">
+            <tr>
+              <th style="padding-top: 0;">
+                <h3>Administratieve vaardigheden</h3>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    Microsoft Office: Word, Excel, Acces, Powerpoint, OneNote
+                  </li>
+                  <li>
+                    blind typen
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <th><h3>Commerciële vaardigheden</h3></th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    klassikaal verkoopproject
+                  </li>
+                  <li>
+                    eigen studentenonderneming
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th><h3>Computervaardigheden</h3></th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    websites designen, programmeren, onderhouden
+                  </li>
+                  <li>
+                    C#-toepassingen
+                  </li>
+                  <li>
+                    Java-toepassingen
+                  </li>
+                  <li>
+                    Python-toepassingen
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </details>
+        <details open>
+          <summary>Studies</summary>
+          <table>
+            <tr>
+              <td>
+                <h3>
+                  IT & Netwerken
+                  <a style="font-size: 0.9rem;"
+                    >– Immaculata Secundair Oostmalle</a
+                  >
+                </h3>
+              </td>
+              <td class="time">
+                <h3>
+                  <a style="text-align: right;font-size: 0.9rem;"
+                    >2018 - heden</a
+                  >
+                </h3>
+              </td>
+            </tr>
+          </table>
+        </details>
+        <details open>
+          <summary>Werkervaring</summary>
+          <table>
+            <tr>
+              <td>
+                <h3>
+                  Garçon / Keukenhulp
+                  <a style="font-size: 0.9rem;">– De Kasteelhoeve</a>
+                </h3>
+              </td>
+              <td class="time">
+                <h3>
+                  <a style="text-align: right;font-size: 0.9rem;"
+                    >2018 - heden</a
+                  >
+                </h3>
+              </td>
+            </tr>
+          </table>
+        </details>
+      </div>
+      <div class="tbl">
+        <img
+          src="images/about.png"
+          style="position: relative; object-fit:cover; height: 100%; width: 100%; border-top-left-radius: 60px;"
+        />
+        <div style="position:relative">
+          <div class="box">
+            <h1>Arne Meylemans</h1>
+            <p>
+              <a style="color:rgba(255,255,255,0.7)">Leeftijd: </a>17 jaar
+            </p>
+            <p>
+              <a style="color:rgba(255,255,255,0.7)">Kwaliteiten: </a
+              >contactvaardig, behulpzaam, leergierig, flexibel...
+            </p>
+            <p>
+              <a style="color:rgba(255,255,255,0.7)">Hobby's & intresses: </a
+              >badminton, programmeren, fotografie
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

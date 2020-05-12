@@ -21,9 +21,19 @@ a.hand {
     cursor: pointer;
 }
 
-section:not(#home) {
-    margin: 10rem 10% 10% 10%;
+section {
+    margin: 0;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+}
+
+section#about {
+    margin: 0 10%;
     width: 80%;
+}
+
+section#internship {
+    margin-top: 10rem;
 }
 
 section:last-of-type {
