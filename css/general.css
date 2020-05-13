@@ -21,13 +21,13 @@ a.hand {
     cursor: pointer;
 }
 
-section {
+section:not(#home) {
     margin: 0;
     padding-top: 10rem;
-    padding-bottom: 5rem;
+    position: relative;
 }
 
-section#about {
+section:not(#home):not(#internship):not(#other-gip):not(#contact) {
     margin: 0 10%;
     width: 80%;
 }
